@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新卒採用セミナー｜元・採用担当が語る「伝え方」で変わる採用</title>
+
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1904366980442461');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1904366980442461&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- Meta Pixel設置済み -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LP画像セクション -->
+  <main class="lp-wrap">
+    <img src="images/01-fv.png"       alt="新卒採用セミナー ファーストビュー" class="lp-img">
+    <img src="images/02-p.png"        alt="学生が来ない本当の理由" class="lp-img">
+    <img src="images/03-a.png"        alt="頑張っているのに届かない採用" class="lp-img">
+    <img src="images/04-s.png"        alt="知名度ではなく伝え方を整える" class="lp-img">
+    <img src="images/05-b.png"        alt="学生に届く会社の見せ方がわかる" class="lp-img">
+    <img src="images/06-target.png"   alt="こんな方におすすめです" class="lp-img">
+    <img src="images/07-e.png"        alt="セミナーで話すこと" class="lp-img">
+    <img src="images/08-c1.png"       alt="明日から見直せるポイント" class="lp-img">
+    <img src="images/09-offer.png"    alt="まずは無料で採用の見せ方を学ぶ" class="lp-img">
+
+    <!-- ENTRYフォーム -->
+    <section class="form-section" id="form">
+      <div class="form-inner">
+        <p class="form-label">参加無料・オンライン開催</p>
+        <h2 class="form-title">無料セミナーに申し込む</h2>
+        <p class="form-sub">7月16日(木)・23日(木)・30日(木)　13:00〜13:45</p>
+
+        <form action="https://formspree.io/f/mwvjabvn" method="POST" class="entry-form">
+          <div class="form-group">
+            <label for="company">会社名 <span class="required">必須</span></label>
+            <input type="text" id="company" name="company" placeholder="株式会社〇〇" required>
+          </div>
+          <div class="form-group">
+            <label for="name">担当者名 <span class="required">必須</span></label>
+            <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label for="tel">電話番号 <span class="required">必須</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="090-0000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">必須</span></label>
+            <input type="email" id="email" name="email" placeholder="sample@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="date">希望日程 <span class="required">必須</span></label>
+            <select id="date" name="date" required>
+              <option value="">選択してください</option>
+              <option value="7/16(木)">7月16日(木)</option>
+              <option value="7/23(木)">7月23日(木)</option>
+              <option value="7/30(木)">7月30日(木)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="url">会社HP <span class="optional">任意</span></label>
+            <input type="url" id="url" name="url" placeholder="https://example.com">
+          </div>
+          <button type="submit" class="submit-btn">無料セミナーに申し込む</button>
+        </form>
+
+        <p class="form-note">※送信後、確認メールをお送りします。<br>※売り込みは一切ありません。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 固定CTA -->
+  <div class="fixed-cta">
+    <a href="#form" class="fixed-cta-btn">
+      <span class="cta-text">無料セミナーに参加する</span>
+    </a>
+  </div>
+
+  <script>
+    const form = document.querySelector('.entry-form');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.innerHTML = '<p style="text-align:center;padding:40px 0;font-size:18px;font-weight:700;color:#1a2456;">✅ お申し込みありがとうございます！<br><span style="font-size:14px;font-weight:400;color:#555;">確認メールをお送りしましたのでご確認ください。</span></p>';
+        } else {
+          alert('送信に失敗しました。時間をおいて再度お試しください。');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
