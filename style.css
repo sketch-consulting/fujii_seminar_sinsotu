@@ -21,6 +21,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   background: #fff;
+  font-size: 0;    /* 画像間の隙間をゼロに */
+  line-height: 0;  /* 画像間の隙間をゼロに */
 }
 
 /* ===== LP画像 ===== */
