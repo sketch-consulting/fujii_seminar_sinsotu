@@ -21,8 +21,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   background: #fff;
-  font-size: 0;    /* 画像間の隙間をゼロに */
-  line-height: 0;  /* 画像間の隙間をゼロに */
+  display: flex;        /* 画像間の隙間をflexboxで解消 */
+  flex-direction: column;
 }
 
 /* ===== LP画像 ===== */
@@ -30,16 +30,12 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  vertical-align: top;
-  margin-bottom: -2px; /* サブピクセルの隙間を消す */
 }
 
 /* ===== ENTRYフォーム ===== */
 .form-section {
   background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
   padding: 48px 20px 60px;
-  font-size: 16px;   /* lp-wrapのfont-size:0をリセット */
-  line-height: 1.5;  /* lp-wrapのline-height:0をリセット */
 }
 
 .form-inner {
