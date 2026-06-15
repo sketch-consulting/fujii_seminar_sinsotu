@@ -209,7 +209,7 @@ body {
   width: calc(100% - 32px);
   max-width: 500px;
   z-index: 9999;
-  /* 白帯なし・背景透明 */
+  background: transparent;
 }
 
 .fixed-cta-btn {
